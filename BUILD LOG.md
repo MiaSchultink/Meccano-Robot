@@ -59,6 +59,11 @@ void loop() {
 }
 ```
 
+I will admit that when I first tested it I was sure I'd fry an electrical component. I braced for impact, but surprisingly enough the LED of the motor turned solid green and it made a little buzzing sound!
+
+<img width="1080" height="1920" alt="ABAC661B-B3A4-4CB8-A3C6-935A6E56DB24_1_102_o" src="https://github.com/user-attachments/assets/7a8ee01a-66cb-47d6-9428-aebe7fe32797" />
+
+
 
 
 
