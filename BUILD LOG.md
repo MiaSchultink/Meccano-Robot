@@ -14,7 +14,7 @@ I had a good idea of how the power, ground, and signal wires should be connected
 
 <img width="840" height="549" alt="Screenshot 2026-11-20 at 23 03 51" src="https://github.com/user-attachments/assets/2f37fe45-3be4-41c4-ae42-fb3b737c5701" />
 
-<img width="840" height="549" alt="Screenshot 2026-11-20 at 23 03 51" src="https://github.com/user-attachments/assets/8bb77dac-3a6e-4f6e-b495-83af140e40d3" />
+<img width="768" height="1024" alt="509C9D99-A73B-4192-8C4D-B48E4EF4200B_1_105_c" src="https://github.com/user-attachments/assets/f4df30eb-5140-47f0-ba3c-125eb9ef571f" />
 
 <img width="768" height="1024" alt="1017F8BD-3E1F-4B87-8629-8C4B22434A03_1_105_c" src="https://github.com/user-attachments/assets/1c9a3763-d0ad-466d-abe0-cd2634a238db" />
 
