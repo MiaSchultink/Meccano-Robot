@@ -22,7 +22,7 @@ I moved the whole setup to my desk as that's the only place I have working plugs
 
 I used an open source library someone adapted from the oringinal MeccaBrain library or something similar: MeccanoidForArduino. I read a bit of its documentation on github to udnerstand how to use it. I pieced together some basic parts of its test code. https://github.com/alexfrederiksen/MeccanoidForArduino/blob/master/meccanoid_test/meccanoid_test.ino
 
-'''
+```
 #include <Meccanoid.h>
 
 /* Note that their needs to be a 22k ohm pull-up resistor on chain input,
@@ -57,7 +57,7 @@ void loop() {
     Serial.println(servo1.getPosition());
   }
 }
-'''
+```
 
 
 
