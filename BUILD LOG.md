@@ -4,7 +4,7 @@ I figured the battery was dead and looked up the manual to figure out how to cha
 
 Since that was a bust, I started looking at how I could move the servos on it with an Arduino. I decideed I would try to move a single servo first as that wouldn't require that much power. I noticed some people made open source libraries for controlling these types of motors from an Arduino. The one I decided to start with is documented here. https://github.com/alexfrederiksen/MeccanoidForArduino/tree/master
 
-But before I could get to using it, I had to figure out how to even connect a Meccanoid servo to an Arduino Uno. For that, I stumbled upon this helpful video https://www.youtube.com/watch?v=8y_xMW0Kr5c. The video was creaed by MECCAControl which apparently makes a Windows software you can use to easily program Meccanoid components, but I have a mac.
+But before I could get to using it, I had to figure out how to even connect a Meccanoid servo to an Arduino Uno. For that, I stumbled upon this helpful video https://www.youtube.com/watch?v=8y_xMW0Kr5c. The video was creaed by MECCAControl which apparently makes a Windows software you can use to easily program Meccanoid components, but I have a mac. This video also gave me a glimps into how these servos actually work. Aparently you can construct chains of multiple servos and reference each component of your chain in the code.
 
 I started putting the simple hack-job electronics setup together. I basically stole the breadboard and MB102 from the servo arm project I made and got an Arduino R3 I and lying around. I unpluged the left elbow from the rest of the motors in the chain and used the jumper wires I had bought for the servo arm to get a male ending for the breadboard.
 
@@ -20,7 +20,7 @@ I had a good idea of how the power, ground, and signal wires should be connected
 
 I moved the whole setup to my desk as that's the only place I have working plugs for the wall outlet I still relied on.
 
-I used an open source library someone adapted from the oringinal MeccaBrain library or something similar: MeccanoidForArduino. I read a bit of its documentation on github to udnerstand how to use it. I pieced together some basic parts of its test code. https://github.com/alexfrederiksen/MeccanoidForArduino/blob/master/meccanoid_test/meccanoid_test.ino
+I used an open source library someone adapted from the oringinal MeccaBrain library or something similar: MeccanoidForArduino. I read a bit of its documentation on github to udnerstand how to use it. I pieced together some basic parts of its test code. The video from before came in handy. I knew why the code was referencing servo 0 in the chain. https://github.com/alexfrederiksen/MeccanoidForArduino/blob/master/meccanoid_test/meccanoid_test.ino
 
 ```
 #include <Meccanoid.h>
@@ -59,9 +59,36 @@ void loop() {
 }
 ```
 
-I will admit that when I first tested it I was sure I'd fry an electrical component. I braced for impact, but surprisingly enough the LED of the motor turned solid green and it made a little buzzing sound!
+I will admit that when I first tested it I was sure I'd fry an electrical component. I braced for impact, but surprisingly enough the LED of the motor turned solid green and it made a little buzzing sound! Honesly more than anything I was thrilled to see that the servo is still alive after 10 or so years. That meant we had something to work with. It didn't move though...
 
 <img width="1080" height="1920" alt="ABAC661B-B3A4-4CB8-A3C6-935A6E56DB24_1_102_o" src="https://github.com/user-attachments/assets/7a8ee01a-66cb-47d6-9428-aebe7fe32797" />
+
+I hit a bit of a wall here. I tried to print some values to the SerialMonitor and discovered that the Arduino wasn't picking up the motor. The position was -20 and the isConnected value remained 0. I also tried to mess with the IDs a little. I figured maybe it was 1, or maybe each motor on the robot had a unique ID. No luck.
+
+At this point, I consulted the internet. Specicially, gemini. I described the problem. We went back and forth for about half an hour. Every clarification I made helped its advice be more specific. I gave it my wiring setup on the breadboard-Arduino side. I confirmed that its wired correctly.
+
+<img width="1700" height="1058" alt="image" src="https://github.com/user-attachments/assets/84d21ef9-65a4-4dcd-89e1-758d04cc6cfc" />
+
+<img width="1630" height="998" alt="image" src="https://github.com/user-attachments/assets/e50896ac-6f8d-4bdc-a6e6-cbfd06225bc8" />
+
+Turns out the culperate was the setup's connection to the servo. Apparently I connected it to the OUTPUT wires not the INPUT wires on the servo. I didn't know it had 2 different streams.
+
+<img width="1526" height="1028" alt="image" src="https://github.com/user-attachments/assets/938ddca0-4357-4651-95b3-69aae08cc727" />
+
+I plugged the breaboard jumper wires to the input cable and the LED turned blue (like I programmed it to in test code I wrote)! I added the motor movement back in and it moved a litle! Very exciting.
+
+<img width="4284" height="5712" alt="874BB715-B941-4033-96F5-80B52405BC9E" src="https://github.com/user-attachments/assets/d6f47215-fc39-4f5e-a5ac-3ddef532f3cb" />
+
+<img width="1080" height="1920" alt="714AAFEA-B3B8-48F6-A1AD-3D05C3068A71_1_102_o" src="https://github.com/user-attachments/assets/d06ad5a4-2160-43a4-8143-c0c874bfdd61" />
+
+
+
+
+
+
+
+
+
 
 
 
