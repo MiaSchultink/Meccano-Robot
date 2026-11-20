@@ -79,7 +79,8 @@ I plugged the breaboard jumper wires to the input cable and the LED turned blue 
 
 <img width="4284" height="5712" alt="874BB715-B941-4033-96F5-80B52405BC9E" src="https://github.com/user-attachments/assets/d6f47215-fc39-4f5e-a5ac-3ddef532f3cb" />
 
-<img width="1080" height="1920" alt="714AAFEA-B3B8-48F6-A1AD-3D05C3068A71_1_102_o" src="https://github.com/user-attachments/assets/d06ad5a4-2160-43a4-8143-c0c874bfdd61" />
+https://github.com/user-attachments/assets/fafa95e1-296c-4535-a9a4-e90b0a00662a
+
 
 
 
