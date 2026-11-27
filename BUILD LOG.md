@@ -81,6 +81,24 @@ I plugged the breaboard jumper wires to the input cable and the LED turned blue 
 
 https://github.com/user-attachments/assets/fafa95e1-296c-4535-a9a4-e90b0a00662a
 
+Now that I knew one motor worked, I started planning how I would set up the electronics to control all the motors at once. This was harder than I thought. Initially, I thought of hijacking the Meccabrain as it conveniently connects the motors and the battery internally. However, I quickly learned that connecting external electronics I would need for my custom controls would be difficult and require custom soldering in this case, so I decided agains it. I was curious to see how the brain implemented this connection though.
+
+<img width="768" height="1024" alt="D208BE2A-5D3D-4526-9333-5D83CB47E187_1_105_c" src="https://github.com/user-attachments/assets/92959225-63aa-41ab-b57b-01a679259c09" />
+
+<img width="768" height="1024" alt="0B5F13F8-39B3-4083-9CB8-7B81B614F7CB_1_105_c" src="https://github.com/user-attachments/assets/d3b79cab-b56d-4056-91d8-9168cccce6b0" />
+
+While I knew I would eventually have the robot move around independently when I incorperated the Raspberry Pi and camera, I wanted to have the option to control the robot manually. So, this time, unlike the previous arm project, I would couldn't escape buying an ESP32 unless I planned to walk around after it with a laptop. The R4's bluetooth capabiliteis don't let it pair with a PS5 controller.
+
+I began planning the electronics layout around this change. Some online research revealed that I was missing several components. Additionally, it seemed like I didn't actually need the Arduino as the ESP32 had everything I needed. So, I dumped the Arduino. One complication this invites is conveting between 3.3V used by the ESP32 and 5V.
+
+**Rough diagram**
+
+<img width="1558" height="2016" alt="7991F9D7-8C99-4B2E-BE52-E5974A8D3633_1_102_o" src="https://github.com/user-attachments/assets/392ac2de-b045-4d95-9e3e-372f19d30284" />
+
+**Shopping list**
+
+<img width="2606" height="940" alt="image" src="https://github.com/user-attachments/assets/1852ecdb-f172-45b7-953f-3d2425379229" />
+
 
 
 
