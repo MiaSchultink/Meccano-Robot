@@ -99,7 +99,13 @@ I began planning the electronics layout around this change. Some online research
 
 <img width="2606" height="940" alt="image" src="https://github.com/user-attachments/assets/1852ecdb-f172-45b7-953f-3d2425379229" />
 
+I ordered from about 4 different local suppliers. Some of the components arrived. I had accumulated enough electronics and tools to justify freeing one of my desk drawers for them :)
 
+<img width="768" height="1024" alt="1EF1A557-C54D-4FD5-8160-3223DC0EE159_1_105_c" src="https://github.com/user-attachments/assets/9dca8999-7efa-401b-b4e5-d7ba62e3b058" />
+
+While I waited for the rest to arrive, I tested some more of the motors to make sure they still worked. I couldn't test the feet as I didn't have proper equipment to communicate with the DC motors yet.
+
+https://github.com/user-attachments/assets/68c55994-7971-4090-b4d5-8631b27985c9
 
 
 
